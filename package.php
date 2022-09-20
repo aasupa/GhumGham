@@ -36,7 +36,9 @@
 </section>
 
 
-
+<div class="heading" style="background:url(images/cloud1.png) no-repeat">
+   <h1>Packages Available</h1>
+</div>
 
 
 
