@@ -22,8 +22,9 @@
         <a class="active" href="index.php">Home</a>
         <a href="package.php">Packages</a>
         <a href="book.php">Book</a>
-        <a href="signup.php">Signup</a>
+        <a href="register.php">Signup</a>
         </div>
+
 
         <div class="hamburger">
             <span class="bar"></span>
