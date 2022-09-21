@@ -36,35 +36,7 @@ section{
 
 
 
- .message{
-   position: sticky;
-   top:0;
-   margin:0 auto;
-   max-width: 800px;
-   background-color: var(--white);
-   padding:1rem;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   z-index: 10000;
-   gap:1rem;
-}
-
-.message span{
-   font-size: 1rem;
-   color:var(--black);
-}
-
-.message i{
-   cursor: pointer;
-   color:var(--red);
-   font-size: 1.5rem;
-}
-
-.message i:hover{
-   transform: rotate(90deg);
-}
-
+ 
 
 
 
@@ -284,9 +256,140 @@ section{
 
 
 
+
+ .heading-title{
+   text-align: center;
+   margin-bottom: 3rem;
+   font-size: 3rem;
+   text-transform: uppercase;
+   color:var(--black);
+ }
+
+ .services .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(11rem, 0.8fr));
+   gap: 1.5rem;
+}
+
+.services .box-container .box{
+   padding:1.5rem 1.5rem;
+   text-align: center;
+   background: var(--main-color);
+   cursor: pointer;
+}
+
+.services .box-container .box:hover{
+   background: var(--black);
+}
+
+.services .box-container .box img{
+   height: 5rem;
+}
+
+.services .box-container .box h3{
+   color:var(--white);
+   font-size: 1rem;
+   padding-top: 1rem;
+}
+
+.home-about{
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.home-about .image{
+   flex:1 1 37rem;
+}
+
+.home-about .image img{
+   width: 100%;
+}
+
+.home-about .content{
+   flex:1 1 35rem;
+   padding:2rem;
+   background: var(--light-bg);
+}
+
+.home-about .content h3{
+   font-size: 3rem;
+   color:var(--black);
+}
+
+.home-about .content p{
+   font-size: 1rem;
+   padding:1rem 0;
+   line-height: 2;
+   color:var(--black);
+}
+/* Home services, about and packages 
+.home-packages{
+   background: var(--light-bg);
+}
+
+.home-packages .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+   gap: 2rem;
+}
+
+.home-packages .box-container .box{
+   border:var(--border);
+   box-shadow: var(--box-shadow);
+   background: var(--white);
+}
+
+.home-packages .box-container .box:hover .image img{
+   transform: scale(1.1);
+}
+
+.home-packages .box-container .box .image{
+   height: 15rem;
+   overflow: hidden;
+}
+
+.home-packages .box-container .box .image img{
+   height: 50%;
+   width: 50%;
+   object-fit: cover;
+   transition: .2s linear;
+}
+
+.home-packages .box-container .box .content{
+   padding:2rem;
+   text-align: center;
+}
+
+.home-packages .box-container .box .content h3{
+   font-size: 2.5rem;
+   color:var(--black);
+}
+
+.home-packages .box-container .box .content p{
+   font-size: 1.5rem;
+   color:var(--light-black);
+   line-height: 2;
+   padding:1rem 0;
+}
+
+.home-packages .load-more{
+   text-align: center;
+   margin-top: 2rem;
+}
+
+
+Home services, about and packages */
+
+
+
+
+
  .heading{
    background-size: cover !important;
    background-position: center !important;
+   box-shadow: inset 0 0 10px #f7f6f5;
+
    padding-top: 5rem;
    padding-bottom:7rem;
    display: flex;
@@ -301,6 +404,92 @@ section{
    color:var(--black);
    text-shadow: var(--text-shadow);
 }
+
+
+
+
+.packages .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(20rem, 0.5fr));
+   gap: 2rem;
+}
+
+.packages .box-container .box{
+   border:var(--border);
+   box-shadow: var(--box-shadow);
+   background: var(--white);
+   display: none;
+}
+
+.packages .box-container .box:nth-child(1),
+.packages .box-container .box:nth-child(2),
+.packages .box-container .box:nth-child(3),
+.packages .box-container .box:nth-child(4),
+.packages .box-container .box:nth-child(5),
+.packages .box-container .box:nth-child(6){
+   display: inline-block;
+}
+
+.packages .box-container .box:hover .image img{
+   transform: scale(1.1);
+}
+
+.packages .box-container .box .image{
+   height: 18rem;
+   overflow: hidden;
+}
+
+.packages .box-container .box .image img{
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+   transition: .2s linear;
+}
+
+.packages .box-container .box .content{
+   padding:1rem;
+   text-align: center;
+}
+
+.packages .box-container .box .content h3{
+   font-size: 1.5rem;
+   color:var(--black);
+}
+
+.packages .box-container .box .content p{
+   font-size: 0.9rem;
+   color:var(--light-black);
+   line-height: 1.2;
+   padding:0.8rem 0;
+}
+
+.packages .load-more{
+   text-align: center;
+   margin-top: 1.2rem;
+   
+}
+
+.packages .load-more .btn{
+   border-radius: .5rem;
+   margin-top: 1.2rem;
+   padding: 0.5rem 0.5rem;
+}
+
+.packages .box-container .box .content .btn{
+   background-color: red;
+   border-radius: .5rem;
+   margin-top: 1.2rem;
+   padding: 0.5rem 0.5rem;
+}
+
+.packages .box-container .box .content .btn:hover{
+   background-color: rgba(104, 101, 101, 0.934);
+}
+
+
+
+
+
 
 
 .booking .heading-title{
@@ -362,6 +551,34 @@ section{
 
 
 
+.message{
+   position: sticky;
+   top:0;
+   margin:0 auto;
+   max-width: 800px;
+   background-color: var(--white);
+   padding:1rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   z-index: 10000;
+   gap:1rem;
+}
+
+.message span{
+   font-size: 1rem;
+   color:var(--black);
+}
+
+.message i{
+   cursor: pointer;
+   color:var(--red);
+   font-size: 1.5rem;
+}
+
+.message i:hover{
+   transform: rotate(90deg);
+}
 
 
 
