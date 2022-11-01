@@ -54,51 +54,7 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/mardi1.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>adventure & tour</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="images/stupa2.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>adventure & tour</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
             <img src="images/boat1.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>adventure & tour</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="images/machhapuchre1.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>adventure & tour</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="images/valley1.jpg" alt="">
          </div>
          <div class="content">
             <h3>adventure & tour</h3>
@@ -142,7 +98,7 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/cloud1.png" alt="">
+            <img src="images/parasuit.jpg" alt="">
          </div>
          <div class="content">
             <h3>adventure & tour</h3>
@@ -153,7 +109,29 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/ghandruk.jpg" alt="">
+            <img src="images/mardi1.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>adventure & tour</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+            <a href="book.php" class="btn">book now</a>
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="images/pokhara1.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>adventure & tour</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+            <a href="book.php" class="btn">book now</a>
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="images/stupa2.jpg" alt="">
          </div>
          <div class="content">
             <h3>adventure & tour</h3>
@@ -175,7 +153,29 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/cloud1.png" alt="">
+            <img src="images/boat1.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>adventure & tour</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+            <a href="book.php" class="btn">book now</a>
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="images/stupa2.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>adventure & tour</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+            <a href="book.php" class="btn">book now</a>
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="images/mardi1.jpg" alt="">
          </div>
          <div class="content">
             <h3>adventure & tour</h3>
@@ -186,7 +186,7 @@
 
    </div>
 
-   <div class="load-more"><span class="btn">load more..</span></div>
+   <div class="load-more"><span class="btn">load more</span></div>
 
 </section>
 

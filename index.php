@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <link rel="stylesheet" href="css/style.css">
     
@@ -88,28 +89,28 @@
    <div class="box-container">
 
       <div class="box">
-         <img src="images/icon-1.png" alt="">
-         <h3>adventure</h3>
+         <img src="images/paragliding.png" alt="">
+         <h3>Paragliding</h3>
       </div>
 
       <div class="box">
-         <img src="images/icon-2.png" alt="">
-         <h3>tour guide</h3>
+         <img src="images/bunjee2.png" alt="">
+         <h3>Bunjee jump</h3>
       </div>
 
       <div class="box">
-         <img src="images/icon-3.png" alt="">
+         <img src="images/camp.jpg" alt="">
+         <h3>Camping</h3>
+      </div>
+
+      <div class="box">
+         <img src="images/trekking.png" alt="">
          <h3>trekking</h3>
       </div>
 
       <div class="box">
-         <img src="images/icon-4.png" alt="">
-         <h3>camp fire</h3>
-      </div>
-
-      <div class="box">
-         <img src="images/icon-5.png" alt="">
-         <h3>off road</h3>
+         <img src="images/zipflyer.png" alt="">
+         <h3>Zip flyer</h3>
       </div>
 
       <div class="box">
@@ -138,11 +139,9 @@
    </div>
 
    <div class="content">
-      <h3>about us</h3>
+      <h3>About Us</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita et, recusandae nobis fugit modi quibusdam ea assumenda, nulla quisquam repellat rem aliquid sequi maxime sapiente autem ipsum? Nobis, provident voluptate?</p>
-      <a href="about.php" class="btn">read more</a>
    </div>
-
 </section>
 
 <!-- home about section ends -->
@@ -150,56 +149,15 @@
 
 
 
+<section class="home-contact">
 
-
-
-
-<!-- home packages section starts  -
-<section class="home-packages">
-
-   <h1 class="heading-title"> our packages </h1>
-
-   <div class="box-container">
-
-      <div class="box">
-         <div class="image">
-            <img src="images/img-1.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>adventure & tour</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, sint!</p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="images/img-2.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>adventure & tour</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, sint!</p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-      
-      <div class="box">
-         <div class="image">
-            <img src="images/img-3.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>adventure & tour</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos, sint!</p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-
+   <div class="content">
+      <h3>have any questions?</h3>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque cumque exercitationem repellendus, amet ullam voluptatibus?</p>
+      <a href="contact.php" class="btn">contact us</a>
    </div>
 
-   <div class="load-more"> <a href="package.php" class="btn">load more</a> </div>
-
- home packages section ends -->
-
+</section>
 
 
 

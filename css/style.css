@@ -19,7 +19,6 @@
    box-sizing: border-box;
    outline: none; border:none;
    text-decoration: none;
-   text-transform: capitalize;
 }
 
 
@@ -44,12 +43,14 @@ section{
 
  .btn{
     display: inline-block;
+    border-radius: .5rem;
     background: var(--black);
     margin-top: 1rem;
     color:var(--white);
     font-size: 1rem;
-    padding:1rem 1rem;
+    padding:0.8rem 0.8rem;
     cursor: pointer;
+    text-transform: uppercase;
  }
 
  .btn.active{
@@ -66,7 +67,7 @@ section{
 
 
  .form-container{
-   min-height: 55vh;
+   min-height: 100vh;
    background-color: var(--light-bg);
    display: flex;
    align-items: center;
@@ -267,23 +268,26 @@ section{
 
  .services .box-container{
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(11rem, 0.8fr));
+   grid-template-columns: repeat(auto-fit, minmax(10rem, 0.7fr));
    gap: 1.5rem;
 }
 
 .services .box-container .box{
-   padding:1.5rem 1.5rem;
+   padding:0.8rem 0.8rem;
+   border-radius: .5rem;
    text-align: center;
    background: var(--main-color);
    cursor: pointer;
 }
 
 .services .box-container .box:hover{
-   background: var(--black);
+   background:  rgb(223, 247, 247);
 }
 
 .services .box-container .box img{
-   height: 5rem;
+   height: 80%;
+   width: 80%;
+   
 }
 
 .services .box-container .box h3{
@@ -291,6 +295,10 @@ section{
    font-size: 1rem;
    padding-top: 1rem;
 }
+
+
+
+
 
 .home-about{
    display: flex;
@@ -309,7 +317,7 @@ section{
 .home-about .content{
    flex:1 1 35rem;
    padding:2rem;
-   background: var(--light-bg);
+   background: rgb(223, 247, 247);
 }
 
 .home-about .content h3{
@@ -323,62 +331,71 @@ section{
    line-height: 2;
    color:var(--black);
 }
-/* Home services, about and packages 
-.home-packages{
-   background: var(--light-bg);
+
+
+.home-contact{
+   background-color:rgb(223, 247, 247);
 }
 
-.home-packages .box-container{
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-   gap: 2rem;
-}
-
-.home-packages .box-container .box{
-   border:var(--border);
-   box-shadow: var(--box-shadow);
-   background: var(--white);
-}
-
-.home-packages .box-container .box:hover .image img{
-   transform: scale(1.1);
-}
-
-.home-packages .box-container .box .image{
-   height: 15rem;
-   overflow: hidden;
-}
-
-.home-packages .box-container .box .image img{
-   height: 50%;
-   width: 50%;
-   object-fit: cover;
-   transition: .2s linear;
-}
-
-.home-packages .box-container .box .content{
-   padding:2rem;
+.home-contact .content{
+   max-width: 40rem;
    text-align: center;
+   margin:0 auto;
 }
 
-.home-packages .box-container .box .content h3{
+.home-contact .content h3{
    font-size: 2.5rem;
+   text-transform: uppercase;
    color:var(--black);
 }
 
+.home-contact .content p{
+   padding:1rem 0;
+   line-height: 1;
+   font-size: 1rem;
+}
 
 
-Home services, about and packages */
 
+.contact form{
+   background-color: rgb(223, 247, 247);
+   margin-top: 4rem;
+   border-radius: .5rem;
+   border:var(--border);
+   padding:3rem;
+   max-width: 30rem;
+   max-height: 30rem;
+   margin:0 auto;
+   text-align: center;
+}
 
+.contact form h3{
+   font-size: 2rem;
+   text-transform: uppercase;
+   margin-bottom: 1rem;
+   color:var(--black);
+}
 
+.contact form .box{
+   margin:1rem 0;
+   width: 100%;
+   border:var(--border);
+   background-color: var(--white);
+   padding:0.6rem 0.6rem;
+   font-size: 1rem;
+   color:var(--black);
+   border-radius: .5rem;
+}
+
+.contact form textarea{
+   height: 6rem;
+}
 
 
  .heading{
    background-size: cover !important;
    background-position: center !important;
    box-shadow: inset 0 0 10px #f7f6f5;
-
    padding-top: 5rem;
    padding-bottom:7rem;
    display: flex;
@@ -454,8 +471,7 @@ Home services, about and packages */
 
 .packages .load-more{
    text-align: center;
-   margin-top: 1.2rem;
-   
+   margin-top: 2rem;
 }
 
 .packages .load-more .btn{
@@ -474,10 +490,6 @@ Home services, about and packages */
 .packages .box-container .box .content .btn:hover{
    background-color: rgba(104, 101, 101, 0.934);
 }
-
-
-
-
 
 
 
