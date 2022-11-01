@@ -54,33 +54,42 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/boat1.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>adventure & tour</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
             <img src="images/ghandruk.jpg" alt="">
          </div>
          <div class="content">
-            <h3>adventure & tour</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+            <h3>Ghandruk</h3>
+            <p>It is a two-day trip from Pokhara. It’s best to go to Ghandruk from mid-September to November for a
+               spectacular view of the Annapurna mountain. 
+               That is why we have made the package for two days.
+               In this way, the mesmerizing sunrise and sunset can also be experienced by visitors. </p>
             <a href="book.php" class="btn">book now</a>
          </div>
       </div>
 
       <div class="box">
          <div class="image">
-            <img src="images/boat2.png" alt="">
+            <img src="images/boat1.jpg" alt="">
          </div>
          <div class="content">
-            <h3>adventure & tour</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
+            <h3>Begnas lake</h3>
+            <p>Begnas Lake is a beautiful freshwater lake in Pokhara Lekhnath Metropolis of Kaski district of Nepal located in the south-east of the Pokhara Valley.
+               The lake is the third largest lake of Nepal and second largest, after Phewa Lake, among the eight lakes in Pokhara Valley.
+               It takes about nearly 40 mins to go by vehicle to reach the lake. </p>
+            <a href="book.php" class="btn">book now</a>
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="images/parasuit.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>Paragliding</h3>
+            <p>Paragliding is one of the most popular adventure activities in Pokhara.
+               Pokhara is also recognized as one of the top five tandem paragliding spots in the world as it has stable thermals,
+                easy take-off, and landing sites.
+               The Pokhara paragliding height is 1592 meters/ 5223 feet from sea level.You will fly like 
+               a bird and get a delighting aerial experience with the view of beautiful Fewa Lake, valley, and Himalayas.</p>
             <a href="book.php" class="btn">book now</a>
          </div>
       </div>

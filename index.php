@@ -1,3 +1,16 @@
+<?php
+
+include 'config.php';
+
+session_start();
+
+$user_id = $_SESSION['user_id'];
+
+if(!isset($user_id)){
+   header('location:login.php');
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +22,12 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
     <link rel="stylesheet" href="css/style.css">
+
     
 </head>
 <body>
+
 
 <section class="header">
     <a href="index.php" class="logo">GhumGham.</a>
@@ -142,10 +155,24 @@
       <h3>About Us</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita et, recusandae nobis fugit modi quibusdam ea assumenda, nulla quisquam repellat rem aliquid sequi maxime sapiente autem ipsum? Nobis, provident voluptate?</p>
    </div>
+          
 </section>
 
 <!-- home about section ends -->
 
+<section class="map">
+       <h1 class="heading-title">
+      Search your destination!
+      <div>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d56252.87395635391!2d83.968!3d28.213248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1667200795038!5m2!1sen!2snp"
+          width="800" height="400" style="border:1vh;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>  
+       <!--   <div class="content">
+      <h3> search where u like to visit</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita et, recusandae nobis fugit modi quibusdam ea assumenda, nulla quisquam repellat rem aliquid sequi maxime sapiente autem ipsum? Nobis, provident voluptate?</p>
+   </div> -->
+
+</section>
 
 
 
@@ -158,6 +185,11 @@
    </div>
 
 </section>
+
+
+
+
+
 
 
 

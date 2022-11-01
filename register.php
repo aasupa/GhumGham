@@ -1,6 +1,8 @@
 <?php
 
 include 'config.php';
+$db = mysqli_connect('localhost', 'root', '', 'shop_db');
+
 
 if(isset($_POST['submit'])){
 
@@ -12,9 +14,21 @@ if(isset($_POST['submit'])){
 
    $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email' AND password = '$pass'") or die('query failed');
 
-   if(mysqli_num_rows($select_users) > 0){
-      $message[] = 'user already exist!';
-   }else{
+   $user_check_query = "SELECT * FROM users WHERE name='$name' OR email='$email' LIMIT 1";
+  $result = mysqli_query($db, $user_check_query);
+  $user = mysqli_fetch_assoc($result);
+  
+  if ($user) { 
+    if ($user['name'] === $name) {
+      $message[] ="Username already exists";
+    }
+
+    if ($user['email'] === $email) {
+      $message[] = "email already exists";
+    }
+  }
+  
+  else{
       if($pass != $cpass){
          $message[] = 'confirm password not matched!';
       }else{
@@ -26,8 +40,8 @@ if(isset($_POST['submit'])){
 
 }
 
-?>
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">

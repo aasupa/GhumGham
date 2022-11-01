@@ -59,7 +59,7 @@ section{
  }
  
  .btn:hover{
-    background: var(--main-color);
+    background:var(--main-color);
  }
 
 
@@ -122,6 +122,22 @@ section{
    text-decoration: underline;
 }
 
+.error {
+   width: 92%; 
+   margin: 0px auto; 
+   padding: 10px; 
+   border: 1px solid #a94442; 
+   color: #a94442; 
+   background: #f2dede; 
+   border-radius: 5px; 
+   text-align: left;
+ }
+ .success {
+   color: #3c763d; 
+   background: #dff0d8; 
+   border: 1px solid #3c763d;
+   margin-bottom: 20px;
+ }
 
 
  
@@ -139,6 +155,13 @@ section{
     align-items: center;
     justify-content: space-between;
  }
+
+ .header .flex{
+   display: flex;
+   align-items: center;
+   padding: 2rem;
+   justify-content: space-between;
+ }
  
  .header .logo{
     font-size: 1.7rem;
@@ -155,7 +178,9 @@ section{
     color:var(--main-color);
  }
  
- 
+ section{
+   padding:3rem 2rem;
+}
 
 
 .hamburger{
@@ -193,7 +218,7 @@ section{
     justify-content: center;
     background-size: cover !important;
     background-position: center !important;
-    min-height: 42rem;
+    min-height: 48.5rem;
  }
  
  .home .slide .content{
@@ -317,7 +342,7 @@ section{
 .home-about .content{
    flex:1 1 35rem;
    padding:2rem;
-   background: rgb(223, 247, 247);
+   background:rgb(223, 247, 247);
 }
 
 .home-about .content h3{
@@ -332,12 +357,32 @@ section{
    color:var(--black);
 }
 
+.home-about .content h1{
+   margin-bottom: 50rem;
+}
+
+.map{
+   display: flex;
+   align-items: center;
+   padding-left: 25rem;
+}
+
+
+
+
+
+
+
 
 .home-contact{
    background-color:rgb(223, 247, 247);
+   display: flex;
+   align-items: center;
+   
 }
 
 .home-contact .content{
+
    max-width: 40rem;
    text-align: center;
    margin:0 auto;
