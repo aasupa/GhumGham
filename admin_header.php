@@ -7,7 +7,7 @@
       <nav class="navbar">
          <a href="admin_page.php">Home</a>
          <a href="admin_package.php">Packages</a>
-         <a href="admin_books.php">Booking</a>
+         <a href="admin_book.php">Booking</a>
          <a href="admin_users.php">Users</a>
          <a href="admin_contacts.php">Messages</a>
       </nav>
