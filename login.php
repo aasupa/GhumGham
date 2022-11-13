@@ -4,9 +4,9 @@ include 'config.php';
 session_start();
 
 if(isset($_POST['submit'])){
-   
+
    $email = mysqli_real_escape_string($conn, $_POST['email']);
-   if (empty($email)) { $message[] = "Email is required"; }
+   
    $password = mysqli_real_escape_string($conn, md5($_POST['password']));
 
    $select_users = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email' AND password = '$password'") or die('query failed');
@@ -54,6 +54,13 @@ if(isset($_POST['submit'])){
 
 </head>
 <body>
+<style>
+body {
+  background-image: url('images/loginbg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+</style>
 
 <?php
 if(isset($message)){

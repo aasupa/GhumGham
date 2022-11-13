@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 :root{
-   --main-color:#8e44ad;
+   --main-color: #CD853F;
    --black:#222;
    --white:#fff;
    --light-black:#777;
@@ -21,8 +21,11 @@
    text-decoration: none;
 }
 
-
+body{
+   background-color: #f3e8de;
+}
 section{
+   
     padding:5rem 10%;
  }
  
@@ -43,7 +46,7 @@ section{
 
  .btn{
     display: inline-block;
-    border-radius: .5rem;
+    border-radius: 2rem;
     background: var(--black);
     margin-top: 1rem;
     color:var(--white);
@@ -54,21 +57,41 @@ section{
  }
 
  .btn.active{
-    background: var(--main-color);
+   background: var(--main-color);
 
+}
+
+.btn:hover{
+   background:var(--main-color);
+}
+
+ .delete-btn{
+   display: inline-block;
+   margin-top:0;
+   padding:0.3rem 0.3rem;
+   background-color: red;
+   cursor: pointer;
+   color:white;
+   font-size: 1rem;
+   border-radius: .5rem;
+   text-transform: capitalize;
  }
  
- .btn:hover{
-    background:var(--main-color);
+ .delete-btn:hover{
+   background: var(--light-black);
  }
 
+
+
+ 
+
+ 
 
 
 
 
  .form-container{
    min-height: 100vh;
-   background-color: var(--light-bg);
    display: flex;
    align-items: center;
    justify-content: center;
@@ -103,7 +126,7 @@ section{
    margin:1rem 0;
 }
 .form-container form .btn{
-   border-radius: .5rem;
+   border-radius: 2rem;
    font-size: 1rem;
    padding: 0.5rem 0.5rem;
 }
@@ -159,7 +182,7 @@ section{
  .header .flex{
    display: flex;
    align-items: center;
-   padding: 2rem;
+   padding: 1rem;
    justify-content: space-between;
  }
  
@@ -169,7 +192,7 @@ section{
  }
  
  .header .navbar a{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-left: 2rem;
     color:var(--black);
  }
@@ -178,6 +201,51 @@ section{
     color:var(--main-color);
  }
  
+ .header  .icons > *{
+   font-size: 2rem;
+   color:var(--purple);
+   cursor: pointer;
+   margin-left: 0;
+}
+
+.header .icons:hover{
+   color:var(--purple);
+}
+
+
+.header .user-box{
+   position: absolute;
+   top:100%; right:2rem;
+   background-color: var(--white);
+   border-radius: .5rem;
+   box-shadow: var(--box-shadow);
+   border:var(--border);
+   padding:1rem;
+   text-align: center;
+   width: 18rem;
+   display: none;
+   animation: fadeIn .2s linear;
+}
+
+.header .user-box.active{
+   display: inline-block;
+}
+
+.header .user-box p{
+   font-size: 1rem;
+   color:var(--light-color);
+   margin-bottom: 1.5rem;
+}
+
+.header .user-box p span{
+   color:var(--purple);
+}
+
+
+
+
+
+
  section{
    padding:3rem 2rem;
 }
@@ -202,10 +270,6 @@ section{
 
 
 
-
-
-
-
  .home{
     padding:0;
  }
@@ -218,7 +282,7 @@ section{
     justify-content: center;
     background-size: cover !important;
     background-position: center !important;
-    min-height: 48.5rem;
+    min-height: 42rem;
  }
  
  .home .slide .content{
@@ -249,7 +313,7 @@ section{
  }
  
  .home .slide .content .btn{
-    border-radius: 1rem;
+    border-radius: 2rem;
     animation:fadeIn .2s linear backwards .6s;
  }
  
@@ -281,8 +345,6 @@ section{
  }
 
 
-
-
  .heading-title{
    text-align: center;
    margin-bottom: 3rem;
@@ -292,6 +354,8 @@ section{
  }
 
  .services .box-container{
+   margin-left: 6rem;
+   margin-right: 6rem;
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(10rem, 0.7fr));
    gap: 1.5rem;
@@ -306,7 +370,11 @@ section{
 }
 
 .services .box-container .box:hover{
-   background:  rgb(223, 247, 247);
+   background: rgb(223, 247, 247);
+}
+
+.services .box-container .box:hover h3{
+   color: #222;
 }
 
 .services .box-container .box img{
@@ -324,8 +392,9 @@ section{
 
 
 
-
 .home-about{
+   margin-left: 6rem;
+   margin-right: 6rem;
    display: flex;
    align-items: center;
    flex-wrap: wrap;
@@ -342,7 +411,7 @@ section{
 .home-about .content{
    flex:1 1 35rem;
    padding:2rem;
-   background:rgb(223, 247, 247);
+   background: #f7cea5;
 }
 
 .home-about .content h3{
@@ -361,10 +430,12 @@ section{
    margin-bottom: 50rem;
 }
 
-.map{
-   display: flex;
-   align-items: center;
-   padding-left: 25rem;
+
+
+.map .map-wrapper{
+   max-width: 100%;
+   height: 10rem;
+   margin-bottom: 20rem;
 }
 
 
@@ -372,10 +443,10 @@ section{
 
 
 
-
-
 .home-contact{
-   background-color:rgb(223, 247, 247);
+   margin-left: 6rem;
+   margin-right: 6rem;
+   background-color: #f7cea5;
    display: flex;
    align-items: center;
    
@@ -403,13 +474,13 @@ section{
 
 
 .contact form{
-   background-color: rgb(223, 247, 247);
-   margin-top: 4rem;
+   background-color: #f7cea5;
+   margin-top:2rem;
    border-radius: .5rem;
    border:var(--border);
    padding:3rem;
-   max-width: 30rem;
-   max-height: 30rem;
+   max-width: 28rem;
+   max-height: 35rem;
    margin:0 auto;
    text-align: center;
 }
@@ -433,7 +504,11 @@ section{
 }
 
 .contact form textarea{
-   height: 6rem;
+   height: 5rem;
+}
+
+.contact form .btn{
+   margin-bottom: 1rem;
 }
 
 
@@ -456,21 +531,54 @@ section{
    text-shadow: var(--text-shadow);
 }
 
-
-
-
 .packages .box-container{
+   max-width: 1200px;
+   margin:0 auto;
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(20rem, 0.5fr));
-   gap: 2rem;
+   align-items: flex-start;
+   gap:1.5rem;
+   justify-content: center;
 }
 
 .packages .box-container .box{
-   border:var(--border);
+   border-radius: .5rem;
+   background-color: var(--white);
    box-shadow: var(--box-shadow);
-   background: var(--white);
-   display: none;
+   padding:2rem;
+   text-align: center;
+   border:var(--border);
+   position: relative;
 }
+
+.packages .box-container .box .image{
+   height: 18rem;
+   width: 20rem;
+   overflow: hidden;
+}
+
+.packages .box-container .box .name{
+   padding:1rem 0;
+   font-size: 1.6rem;
+   color:var(--black);
+}
+
+
+
+.packages .box-container .box .price{
+   position: absolute;
+   top:1rem; left:1rem;
+   border-radius: .5rem;
+   padding:.5rem .5rem;
+   font-size: 1rem;
+   color:white;
+   background-color: red;
+}
+
+.packages .box-container .box:hover .image img{
+   transform: scale(1.1);
+}
+
 
 .packages .box-container .box:nth-child(1),
 .packages .box-container .box:nth-child(2),
@@ -497,23 +605,6 @@ section{
    transition: .2s linear;
 }
 
-.packages .box-container .box .content{
-   padding:1rem;
-   text-align: center;
-}
-
-.packages .box-container .box .content h3{
-   font-size: 1.5rem;
-   color:var(--black);
-}
-
-.packages .box-container .box .content p{
-   font-size: 0.9rem;
-   color:var(--light-black);
-   line-height: 1.2;
-   padding:0.8rem 0;
-}
-
 .packages .load-more{
    text-align: center;
    margin-top: 2rem;
@@ -525,14 +616,14 @@ section{
    padding: 0.5rem 0.5rem;
 }
 
-.packages .box-container .box .content .btn{
+.packages .box-container .box  .btn{
    background-color: red;
    border-radius: .5rem;
    margin-top: 1.2rem;
    padding: 0.5rem 0.5rem;
 }
 
-.packages .box-container .box .content .btn:hover{
+.packages .box-container .box .btn:hover{
    background-color: rgba(104, 101, 101, 0.934);
 }
 
@@ -545,9 +636,10 @@ section{
 
 .booking .book-form{
    width:75rem;
+   margin-left: 14rem;
    padding:2.5rem;
    border-radius: .5rem;
-   background: rgb(223, 247, 247);
+   background: #f7cea5;
 }
 
 .booking .book-form .flex{
@@ -571,9 +663,20 @@ section{
    border-radius: .5rem;
 }
 
+.booking .book-form .flex .inputBox select{
+   width: 90%;
+   padding:0.4rem 0.4rem;
+   font-size: 0.8rem;
+   text-transform: none;
+   color: var(--light-black);
+   background-color: white;
+   margin-top: 0.5rem;
+   border:var(--border);
+   border-radius: .5rem;
+}
 
 .booking .book-form .flex .inputBox input:focus{
-   background: var(--black);
+   background: rgb(182, 184, 186);
    color:var(--white);
 }
 
@@ -613,7 +716,7 @@ section{
 
 .message span{
    font-size: 1rem;
-   color:var(--black);
+   color:#a94442;
 }
 
 .message i{
@@ -627,6 +730,48 @@ section{
 }
 
 
+.placed-orders .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 30rem);
+   justify-content: center;
+   gap:1.5rem;
+   max-width: 1200px;
+   margin:0 auto;
+   align-items: flex-start;
+}
+
+.placed-orders .box-container .box{
+   background-color: var(--white);
+   padding:2rem;
+   border:var(--border);
+   box-shadow: var(--box-shadow);
+   border-radius: .5rem;
+}
+
+.placed-orders .box-container .box p{
+   padding-bottom: 1rem;
+   font-size: 1rem;
+   color:var(--light-color);
+}
+
+.placed-orders .box-container .box p span{
+   color:var(--purple);
+}
+
+.placed-orders .box-container .box form{
+   text-align: center;
+}
+
+.placed-orders .box-container .box form select{
+   border-radius: .5rem;
+   margin:.5rem 0;
+   width: 100%;
+   background-color: var(--light-bg);
+   border:var(--border);
+   padding:1.2rem 1.4rem;
+   font-size: 1.8rem;
+   color:var(--black);
+}
 
 
 
@@ -705,12 +850,17 @@ section{
        font-size: 10vw;
     }
  
+    .map .map-wrapper{
+      padding-left: 15rem;
+      width: 50%;
+      height: 5rem;
+      margin-bottom: 45rem;
+   }
  }
  
 
 
  @media (max-width:768px){
- 
     .heading h1{
        font-size: 4rem;
     }
@@ -751,6 +901,14 @@ section{
 
     }
 
+    .map .map-wrapper{
+      width: 20%;
+      height: 5rem;
+      margin-bottom: 45rem;
+   }
+
+
+
 
  
  }
@@ -763,4 +921,10 @@ section{
     .heading-title{
         font-size: 3.5rem;
      }
+     .map .map-wrapper{
+      max-width: 10%;
+      height: 5rem;
+      margin-bottom: 45rem;
+   }
+
 }

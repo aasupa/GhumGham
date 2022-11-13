@@ -1,6 +1,6 @@
 :root{
-    --purple:#8e44ad;
-    --red:#c0392b;
+    --maroon:#7c0303;
+    --red:#ee2a58;
     --orange:#f39c12;
     --black:#333;
     --white:#fff;
@@ -21,7 +21,7 @@
  }
  
  *::selection{
-    background-color: var(--purple);
+    background-color: #7c0303;
     color:var(--white);
  }
  
@@ -35,7 +35,7 @@
  }
  
  *::-webkit-scrollbar-thumb{
-    background-color: var(--purple);
+    background-color: #7c0303;
  }
  
  html{
@@ -44,7 +44,8 @@
  }
  
  body{
-    background-color: var(--light-bg);
+   background-color: #f3e8de;
+
  }
  
  section{
@@ -119,15 +120,15 @@
  
  .white-btn,
  .btn{
-    background-color: var(--purple);
+    background-color: var(--maroon);
  }
  
  .option-btn{
-    background-color: var(--orange);
+    background-color: rgb(32, 104, 32);
  }
  
  .delete-btn{
-    background-color: var(--red);
+    background-color: red;
  }
  
  .white-btn:hover{
@@ -166,7 +167,7 @@
  }
  
  .header .flex .logo span{
-    color:var(--purple);
+    color:var(--maroon);
  }
  
  .header .flex .navbar a{
@@ -176,7 +177,7 @@
  }
  
  .header .flex .navbar a:hover{
-    color:var(--purple);
+    color:var(--maroon);
  }
  
  .header .flex .icons div{
@@ -187,7 +188,7 @@
  }
  
  .header .flex .icons div:hover{
-    color:var(--purple);
+    color:var(--maroon);
  }
  
  .header .flex .account-box{
@@ -216,7 +217,7 @@
  }
  
  .header .flex .account-box p span{
-    color:var(--purple);
+    color:#7c0303;
  }
  
  .header .flex .account-box .delete-btn{
@@ -268,14 +269,17 @@
     margin-top: 1.5rem;
     padding:1.5rem;
     background-color: var(--light-bg);
-    color:var(--purple);
+    color:var(--maroon);
     font-size: 2rem;
     border-radius: .5rem;
     border:var(--border);
  }
 
 
-
+.background{
+   padding:30rem;
+   min-height: 20rem;
+}
  
  .add-products form{
    background-color: var(--white);
@@ -349,7 +353,7 @@
 .show-products .box-container .box .price{
    padding:1rem 0;
    font-size: 2rem;
-   color:var(--red);
+   color:red;
 }
 
 .edit-product-form{
@@ -390,6 +394,49 @@
    width: 100%;
 }
 
+
+.orders .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 30rem);
+   justify-content: center;
+   gap:1.5rem;
+   max-width: 1200px;
+   margin:0 auto;
+   align-items: flex-start;
+}
+
+.orders .box-container .box{
+   background-color: var(--white);
+   padding:2rem;
+   border:var(--border);
+   box-shadow: var(--box-shadow);
+   border-radius: .5rem;
+}
+
+.orders .box-container .box p{
+   padding-bottom: 1rem;
+   font-size: 2rem;
+   color:var(--light-color);
+}
+
+.orders .box-container .box p span{
+   color:var(--purple);
+}
+
+.orders .box-container .box form{
+   text-align: center;
+}
+
+.orders .box-container .box form select{
+   border-radius: .5rem;
+   margin:.5rem 0;
+   width: 100%;
+   background-color: var(--light-bg);
+   border:var(--border);
+   padding:1.2rem 1.4rem;
+   font-size: 1.8rem;
+   color:var(--black);
+}
 
 
 

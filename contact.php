@@ -21,7 +21,14 @@ if(isset($_POST['send'])){
 
    if(mysqli_num_rows($select_message) > 0){
       $message[] = 'message sent already!';
-   }else{
+   }
+   else if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+      $message[] ="name not valid";
+    }
+    else if (strlen($number) < 10) { 
+      $message[] ="Phone not valid";
+    }
+   else{
       mysqli_query($conn, "INSERT INTO `message`(user_id, name, email, number, message) VALUES('$user_id', '$name', '$email', '$number', '$msg')") or die('query failed');
       $message[] = 'message sent successfully!';
    }
@@ -36,7 +43,7 @@ if(isset($_POST['send'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Packages</title>
+    <title>Contact Us</title>
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
@@ -65,6 +72,15 @@ if(isset($_POST['send'])){
 
     </nav>
     
+    <div class="icons">
+            <div id="user-btn" class="fas fa-user"></div>
+         </div>
+
+         <div class="user-box">
+            <p>Username : <span><?php echo $_SESSION['user_name']; ?></span></p>
+            <p>Email : <span><?php echo $_SESSION['user_email']; ?></span></p>
+            <a href="logout.php" class="delete-btn">Logout</a>
+         </div>
 </section>
 
 
@@ -73,14 +89,27 @@ if(isset($_POST['send'])){
    <h1>contact us</h1>
 </div>
 
+
+<?php
+if(isset($message)){
+   foreach($message as $message){
+      echo '
+      <div class="message">
+         <span>'.$message.'</span>
+         <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+      </div>
+      ';
+   }
+}
+?>
 <section class="contact">
 
    <form action="" method="post">
       <h3>say something!</h3>
-      <input type="text" name="name" required placeholder="enter your name" class="box">
-      <input type="email" name="email" required placeholder="enter your email" class="box">
-      <input type="number" name="number" required placeholder="enter your number" class="box">
-      <textarea name="message" class="box" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+      <input type="text" name="name" required placeholder="enter your name" class="box" required>
+      <input type="email" name="email" required placeholder="enter your email" class="box" required>
+      <input type="number" name="number" required placeholder="enter your number" class="box"required>
+      <textarea name="message" class="box" placeholder="enter your message" id="" cols="30" rows="10" required></textarea>
       <input type="submit" value="send message" name="send" class="btn">
    </form>
 

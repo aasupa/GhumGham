@@ -14,7 +14,23 @@ document.querySelectorAll(".nav-menu").forEach(n => n.
     }))
 
 
+let userBox = document.querySelector('.header .user-box');
 
+document.querySelector('#user-btn').onclick = () => {
+   userBox.classList.toggle('active');
+   navbar.classList.remove('active');
+}
+
+window.onscroll = () =>{
+   userBox.classList.remove('active');
+   navbar.classList.remove('active');
+
+   if(window.scrollY > 60){
+      document.querySelector('.header .user-box').classList.add('active');
+   }else{
+      document.querySelector('.header .user-box').classList.remove('active');
+   }
+}
 
 var swiper = new Swiper(".home-slider", {
       loop:true,
@@ -40,3 +56,5 @@ loadMoreBtn.onclick = () =>{
       loadMoreBtn.style.display = 'none';
    }
 }
+
+

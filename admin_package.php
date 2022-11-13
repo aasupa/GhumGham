@@ -100,7 +100,17 @@ if(isset($_POST['update_product'])){
 </head>
 
 <body>
-   
+
+<style>
+body {
+  background-image: url('images/trekk.png');
+  background-size:45rem;
+  background-position-x: 8rem;
+  background-position-y: 20rem;
+  background-repeat: no-repeat;
+}
+</style>
+
 <?php include 'admin_header.php'; ?>
 
 <?php
@@ -146,7 +156,7 @@ if(isset($message)){
          <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
          <div class="name"><?php echo $fetch_products['name']; ?></div>
          <div class="details"><?php echo $fetch_products['details']; ?></div>
-         <div class="price">$<?php echo $fetch_products['price']; ?>/-</div>
+         <div class="price">NPR.<?php echo $fetch_products['price']; ?>/-</div>
          <a href="admin_package.php?update=<?php echo $fetch_products['id']; ?>" class="option-btn">update</a>
          <a href="admin_package.php?delete=<?php echo $fetch_products['id']; ?>" class="delete-btn" onclick="return confirm('delete this product?');">delete</a>
       </div>

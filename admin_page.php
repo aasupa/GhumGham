@@ -100,10 +100,19 @@ if(!isset($admin_id)){
 
    </div>
 
+   <style>
+body {
+  background-image: url('images/compass.png');
+  background-size: 75rem;
+  background-position-x: 90rem;
+  background-position-y: 35rem;
+  background-repeat: no-repeat;
+}
+</style>
 </section>
 
-<!-- admin dashboard section ends -->
 
+<!-- admin dashboard section ends -->
 
 
 

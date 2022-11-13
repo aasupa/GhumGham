@@ -22,9 +22,14 @@ if(isset($_POST['submit'])){
     if ($user['name'] === $name) {
       $message[] ="Username already exists";
     }
-
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+      $message[] ="Name not valid";
+    }
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+      $message[] ="Email not valid";
+     }
     if ($user['email'] === $email) {
-      $message[] = "email already exists";
+      $message[] = "Email already exists";
     }
   }
   
@@ -60,7 +65,13 @@ if(isset($_POST['submit'])){
 </head>
 <body>
 
-
+<style>
+body {
+  background-image: url('images/loginbg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+</style>
 
 <?php
 if(isset($message)){
@@ -78,11 +89,11 @@ if(isset($message)){
 
 <div class="form-container">
 
-   <form action="" method="post">
+   <form action="" method="post" >
       <h3>register now</h3>
-      <input type="text" name="name" placeholder="enter your name" required class="box">
+      <input type="text" name="name" id="user" placeholder="enter your name" class="box">
       <input type="email" name="email" placeholder="enter your email" required class="box">
-      <input type="password" name="password" placeholder="enter your password" required class="box">
+      <input type="password" name="password" id="pass" placeholder="enter your password" required class="box">
       <input type="password" name="cpassword" placeholder="confirm your password" required class="box">
       <select name="user_type" class="box">
          <option value="user">user</option>
@@ -94,5 +105,9 @@ if(isset($message)){
 
 </div>
 
+
+
+
+
 </body>
-</html>
+</html> 

@@ -1,3 +1,61 @@
+
+<?php
+
+include 'config.php';
+
+session_start();
+
+$user_id = $_SESSION['user_id'];
+
+if(!isset($user_id)){
+   header('location:login.php');
+}
+$result = mysqli_query($conn, "SELECT name FROM packages");
+?>
+
+<?php
+   include 'config.php';
+   if(isset($_POST['send']))
+   {
+      
+      $firstname = $_POST['firstname'];
+      $lastname = $_POST['lastname'];
+      $email = $_POST['email'];
+      $phone = $_POST['phone'];
+      $address = $_POST['address'];
+      $location = $_POST['location'];
+      $guests = $_POST['guests'];
+      $arrivals = $_POST['arrivals'];
+      $leaving = $_POST['leaving'];
+      $method = $_POST['method'];
+
+      if (!preg_match("/^[a-zA-Z-' ]*$/",$firstname)) {
+         $message[] ="name not valid";
+       }
+       else if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+         $message[] ="Email not valid!!";
+        }
+      else if (strlen($phone) < 10) { 
+         $message[] ="Phone number not valid!!";
+       }
+      else if($method == "esewa" || $method == "credit card" ){
+
+         $message[] ="Online payment not available yet!";
+       }
+     
+     else{
+      $request = " insert into book_form(user_id, firstname, lastname, email, phone, address, location, guests, arrivals, leaving, method) values('$user_id','$firstname','$lastname','$email','$phone','$address','$location','$guests','$arrivals','$leaving', '$method') ";
+      mysqli_query($conn, $request);
+      
+      header('location:book.php');
+     }
+     
+   }
+   
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +80,7 @@
         <a class="active" href="index.php">Home</a>
         <a href="package.php">Packages</a>
         <a href="book.php">Book</a>
-        <a href="register.php">Signup</a>
+        <a href="my_book.php">My Bookings</a>
         </div>
 
         <div class="hamburger">
@@ -32,6 +90,19 @@
         </div>
 
     </nav>
+
+    <div class="icons">
+            <div id="user-btn" class="fas fa-user"></div>
+         </div>
+
+         <div class="user-box">
+         <?php
+include 'config.php';
+?>
+            <p>Username : <span><?php echo $_SESSION['user_name']; ?></span></p>
+            <p>Email : <span><?php echo $_SESSION['user_email']; ?></span></p>
+            <a href="logout.php" class="delete-btn">Logout</a>
+         </div>
     
 </section>
 
@@ -43,44 +114,90 @@
 
 
 
+
+
 <section class="booking">
-
+<style>
+body {
+  background-image: url('images/luggage.png');
+  background-size:11rem;
+  background-position-x: 22rem;
+  background-position-y: 21rem;
+  background-repeat: no-repeat;
+}
+</style>
    <h1 class="heading-title">book your trip!</h1>
-
-   <form action="bookform.php" method="post" class="book-form">
-
+   <?php
+if(isset($message)){
+   foreach($message as $message){
+      echo '
+      <div class="message">
+         <span>'.$message.'</span>
+         <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+      </div>
+      ';
+   }
+}
+?>
+   <form action="" method="post" class="book-form">
       <div class="flex">
          <div class="inputBox">
-            <span>name :</span>
-            <input type="text" placeholder="enter your name" name="name">
+            <span>First name :</span>
+            <input type="text" placeholder="enter your firstname" name="firstname"  required class="box">
+            
+         </div>
+         <div class="inputBox">
+            <span>Last name :</span>
+            <input type="text" placeholder="enter your lastname" name="lastname" required class="box">
          </div>
          <div class="inputBox">
             <span>email :</span>
-            <input type="email" placeholder="enter your email" name="email">
+            <input type="email" placeholder="enter your email" name="email" required class="box">
          </div>
          <div class="inputBox">
             <span>phone :</span>
-            <input type="number" placeholder="enter your number" name="phone">
+            <input type="number" placeholder="enter your number" name="phone" required class="box">
          </div>
          <div class="inputBox">
-            <span>address :</span>
-            <input type="text" placeholder="enter your address" name="address">
+         <span>Where to :</span>
+         <select name = 'location'>
+         <option>Select the package name</option>
+            <?php 
+            if($result)
+            {
+               while($row = mysqli_fetch_array($result))
+               {
+                  $pname=$row["name"];
+                  echo"<option>$pname</option>";
+               }
+            }
+            ?>
+         </select>
+            
          </div>
          <div class="inputBox">
-            <span>where to :</span>
-            <input type="text" placeholder="place you want to visit" name="location">
+            <span>Address :</span>
+            <input type="text" placeholder="enter your address" name="address" required class="box">
          </div>
          <div class="inputBox">
             <span>how many :</span>
-            <input type="number" placeholder="number of guests" name="guests">
+            <input type="number" placeholder="number of guests" name="guests" required class="box">
          </div>
          <div class="inputBox">
             <span>arrivals :</span>
-            <input type="date" name="arrivals">
+            <input type="date" name="arrivals" required class="box">
          </div>
          <div class="inputBox">
             <span>leaving :</span>
-            <input type="date" name="leaving">
+            <input type="date" name="leaving" required class="box">
+         </div>
+         <div class="inputBox">
+            <span>payment method :</span>
+            <select name="method">
+               <option value="cash on delivery">cash on delivery</option>
+               <option value="credit card">credit card(not available yet!)</option>
+               <option value="esewa">esewa(not available yet!)</option>
+            </select>
          </div>
       </div>
 
@@ -89,7 +206,6 @@
    </form>
 
 </section>
-
 
 
 

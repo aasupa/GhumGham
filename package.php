@@ -1,3 +1,17 @@
+<?php
+
+include 'config.php';
+
+session_start();
+
+$user_id = $_SESSION['user_id'];
+
+if(!isset($user_id)){
+   header('location:login.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +36,7 @@
         <a class="active" href="index.php">Home</a>
         <a href="package.php">Packages</a>
         <a href="book.php">Book</a>
-        <a href="register.php">Signup</a>
+        <a href="my_book.php">My bookings</a>
         </div>
 
         <div class="hamburger">
@@ -33,6 +47,15 @@
 
     </nav>
     
+    <div class="icons">
+            <div id="user-btn" class="fas fa-user"></div>
+         </div>
+
+         <div class="user-box">
+            <p>Username : <span><?php echo $_SESSION['user_name']; ?></span></p>
+            <p>Email : <span><?php echo $_SESSION['user_email']; ?></span></p>
+            <a href="logout.php" class="delete-btn">Logout</a>
+         </div>
 </section>
 
 
@@ -52,149 +75,29 @@
 
    <div class="box-container">
 
-      <div class="box">
-         <div class="image">
-            <img src="images/ghandruk.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>Ghandruk</h3>
-            <p>It is a two-day trip from Pokhara. It’s best to go to Ghandruk from mid-September to November for a
-               spectacular view of the Annapurna mountain. 
-               That is why we have made the package for two days.
-               In this way, the mesmerizing sunrise and sunset can also be experienced by visitors. </p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="images/boat1.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>Begnas lake</h3>
-            <p>Begnas Lake is a beautiful freshwater lake in Pokhara Lekhnath Metropolis of Kaski district of Nepal located in the south-east of the Pokhara Valley.
-               The lake is the third largest lake of Nepal and second largest, after Phewa Lake, among the eight lakes in Pokhara Valley.
-               It takes about nearly 40 mins to go by vehicle to reach the lake. </p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="images/parasuit.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>Paragliding</h3>
-            <p>Paragliding is one of the most popular adventure activities in Pokhara.
-               Pokhara is also recognized as one of the top five tandem paragliding spots in the world as it has stable thermals,
-                easy take-off, and landing sites.
-               The Pokhara paragliding height is 1592 meters/ 5223 feet from sea level.You will fly like 
-               a bird and get a delighting aerial experience with the view of beautiful Fewa Lake, valley, and Himalayas.</p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="images/stupa2.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>adventure & tour</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="images/parasuit.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>adventure & tour</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="images/mardi1.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>adventure & tour</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="images/pokhara1.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>adventure & tour</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="images/stupa2.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>adventure & tour</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="images/valley1.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>adventure & tour</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="images/boat1.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>adventure & tour</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="images/stupa2.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>adventure & tour</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-
-      <div class="box">
-         <div class="image">
-            <img src="images/mardi1.jpg" alt="">
-         </div>
-         <div class="content">
-            <h3>adventure & tour</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, perspiciatis!</p>
-            <a href="book.php" class="btn">book now</a>
-         </div>
-      </div>
-
-   </div>
-
+<?php  
+   $select_products = mysqli_query($conn, "SELECT * FROM `packages` ") or die('query failed');
+   if(mysqli_num_rows($select_products) > 0){
+      while($fetch_products = mysqli_fetch_assoc($select_products)){
+?>
+<form action="" method="post" class="box">
+<img class="image" src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
+<div class="name"><?php echo $fetch_products['name']; ?></div>
+<div class="details"><?php echo $fetch_products['details']; ?></div>
+<div class="price">NPR.<?php echo $fetch_products['price']; ?>/-</div>
+<input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
+<input type="hidden" name="product_details" value="<?php echo $fetch_products['details']; ?>">
+<input type="hidden" name="product_price" value="<?php echo $fetch_products['price']; ?>">
+<input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>">
+<a href="book.php" class="btn">book now</a>
+</form>
+<?php
+   }
+}else{
+   echo '<p class="empty">no products added yet!</p>';
+}
+?>
+</div>
    <div class="load-more"><span class="btn">load more</span></div>
 
 </section>
