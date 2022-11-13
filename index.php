@@ -176,7 +176,9 @@ if(isset($message)){
 
    <div class="content" data-aos="fade-left">
       <h3>About Us</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita et, recusandae nobis fugit modi quibusdam ea assumenda, nulla quisquam repellat rem aliquid sequi maxime sapiente autem ipsum? Nobis, provident voluptate?</p>
+      <p>Travel and adventures has been the fancy and fun trend lately. Apart from the busy and hectic life schedule,
+          people still manage some spare time for travel and adventures.  
+         GhumGham brings you the availability of several tour packages online to enhance your holidays in less hectic ways. </p>
    </div>
           
 </section>

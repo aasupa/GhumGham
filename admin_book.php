@@ -62,8 +62,8 @@ if(isset($_GET['delete'])){
          <p> Email : <span><?php echo $fetch_orders['email']; ?></span> </p>
          <p> Address : <span><?php echo $fetch_orders['address']; ?></span> </p>
          <p> Destination package : <span><?php echo $fetch_orders['location']; ?></span> </p>
-         <p> Date of arriving : <span><?php echo $fetch_orders['arrivals']; ?>/-</span> </p>
-         <p> Date of leaving : <span><?php echo $fetch_orders['leaving']; ?>/-</span> </p>
+         <p> Date of arriving : <span><?php echo $fetch_orders['arrivals']; ?></span> </p>
+         <p> Date of leaving : <span><?php echo $fetch_orders['leaving']; ?></span> </p>
          <p> Payment method : <span><?php echo $fetch_orders['method']; ?></span> </p>
          <form action="" method="post">
          <input type="hidden" name="order_id" value="<?php echo $fetch_orders['id']; ?>">

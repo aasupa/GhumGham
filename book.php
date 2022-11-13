@@ -15,6 +15,10 @@ $result = mysqli_query($conn, "SELECT name FROM packages");
 
 <?php
    include 'config.php';
+   $sy=date("Y-m-d");
+  
+   
+   
    if(isset($_POST['send']))
    {
       
@@ -41,6 +45,9 @@ $result = mysqli_query($conn, "SELECT name FROM packages");
       else if($method == "esewa" || $method == "credit card" ){
 
          $message[] ="Online payment not available yet!";
+       }
+       else if($arrivals > $leaving || $sy > $arrivals) {
+         $message[] ="Arrival date not valid!";
        }
      
      else{

@@ -13,6 +13,7 @@ if(!isset($user_id)){
 if(isset($_GET['delete'])){
    $delete_id = $_GET['delete'];
    mysqli_query($conn, "DELETE FROM `book_form` WHERE id = '$delete_id'") or die('query failed');
+   
    header('location:my_book.php');
 }
 
@@ -88,19 +89,19 @@ if(isset($_GET['delete'])){
          <p> Email : <span><?php echo $fetch_orders['email']; ?></span> </p>
          <p> Address : <span><?php echo $fetch_orders['address']; ?></span> </p>
          <p> Destination package : <span><?php echo $fetch_orders['location']; ?></span> </p>
-         <p> Date of arriving : <span><?php echo $fetch_orders['arrivals']; ?>/-</span> </p>
-         <p> Date of leaving : <span><?php echo $fetch_orders['leaving']; ?>/-</span> </p>
+         <p> Date of arriving : <span><?php echo $fetch_orders['arrivals']; ?></span> </p>
+         <p> Date of leaving : <span><?php echo $fetch_orders['leaving']; ?></span> </p>
          <p> Payment method : <span><?php echo $fetch_orders['method']; ?></span> </p>
-         <p> payment status : <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){ echo 'red'; }else{ echo 'green'; } ?>;"><?php echo $fetch_orders['payment_status']; ?></span> </p>
+         <p> payment status : <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){ echo 'orange'; }else if($fetch_orders['payment_status'] == 'completed'){ echo 'green'; }else{ echo 'red'; } ?>;"><?php echo $fetch_orders['payment_status']; ?></span> </p>
          <form action="" method="post">
             
-            <a href="my_book.php?delete=<?php echo $fetch_orders['id']; ?>" onclick="return confirm('delete this order?');" class="delete-btn">Cancel Booking</a>
+            <a href="my_book.php?delete=<?php echo $fetch_orders['id']; ?>" onclick="return confirm('Are you sure to cancel this booked package?');" class="delete-btn">Cancel Booking</a>
          </form>
       </div>
       <?php
        }
       }else{
-         echo '<p class="empty">no orders placed yet!</p>';
+         echo '<p class="empty">No bookings placed yet!</p>';
       }
       ?>
    </div>

@@ -25,9 +25,11 @@ body{
    background-color: #f3e8de;
 }
 section{
-   
-    padding:5rem 10%;
- }
+   padding:3rem 7rem;
+}
+
+
+
  
  @keyframes fadeIn {
     0%{
@@ -145,22 +147,7 @@ section{
    text-decoration: underline;
 }
 
-.error {
-   width: 92%; 
-   margin: 0px auto; 
-   padding: 10px; 
-   border: 1px solid #a94442; 
-   color: #a94442; 
-   background: #f2dede; 
-   border-radius: 5px; 
-   text-align: left;
- }
- .success {
-   color: #3c763d; 
-   background: #dff0d8; 
-   border: 1px solid #3c763d;
-   margin-bottom: 20px;
- }
+
 
 
  
@@ -246,9 +233,6 @@ section{
 
 
 
- section{
-   padding:3rem 2rem;
-}
 
 
 .hamburger{
@@ -354,15 +338,15 @@ section{
  }
 
  .services .box-container{
-   margin-left: 6rem;
-   margin-right: 6rem;
+   margin-left: 2rem;
+   margin-right: 2rem;
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(10rem, 0.7fr));
    gap: 1.5rem;
 }
 
 .services .box-container .box{
-   padding:0.8rem 0.8rem;
+   padding:0.9rem 0.9rem;
    border-radius: .5rem;
    text-align: center;
    background: var(--main-color);
@@ -393,8 +377,8 @@ section{
 
 
 .home-about{
-   margin-left: 6rem;
-   margin-right: 6rem;
+   margin-left: 2rem;
+   margin-right: 2rem;
    display: flex;
    align-items: center;
    flex-wrap: wrap;
@@ -402,9 +386,11 @@ section{
 
 .home-about .image{
    flex:1 1 37rem;
+  
 }
 
 .home-about .image img{
+   max-height: 40rem;
    width: 100%;
 }
 
@@ -636,7 +622,7 @@ section{
 
 .booking .book-form{
    width:75rem;
-   margin-left: 14rem;
+   margin-left: 5rem;
    padding:2.5rem;
    border-radius: .5rem;
    background: #f7cea5;
@@ -831,7 +817,7 @@ section{
  @media (max-width:1200px){
 
     section{
-       padding:3rem 5%;
+       padding:3rem 5%
     }
  
  }
